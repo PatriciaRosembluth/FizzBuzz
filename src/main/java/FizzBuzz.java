@@ -7,7 +7,12 @@ public class FizzBuzz
 		if(numero%3==0)
 			return "Fizz";
 		else
-			return Integer.toString(numero);
+		{
+			if(numero==5)
+				return "Buzz";
+			else
+				return Integer.toString(numero);
+		}
 	}
 	
 

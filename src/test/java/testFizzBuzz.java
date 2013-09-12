@@ -1,9 +1,19 @@
 import static org.junit.Assert.*;
 
+import org.junit.Before;
 import org.junit.Test;
 
 
-public class testFizzBuzz {
+public class testFizzBuzz 
+{
+	
+	FizzBuzz fb;
+	
+	@Before
+	public void setUp()
+	{
+		fb=new FizzBuzz();
+	}
 
 	@Test
 	public void testImprimirFizzParaNumero3() 
@@ -28,6 +38,16 @@ public class testFizzBuzz {
 		assertEquals("Fizz", fb.generar(6));
 		
 	}
+	
+	@Test
+	public void testImprimirBuzzParaNumero5() 
+	{
+		FizzBuzz fb=new FizzBuzz();
+		assertEquals("Buzz", fb.generar(5));
+		
+	}
+	
+	
 
 
 }
