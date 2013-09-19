@@ -15,5 +15,14 @@ public class FizzBuzz
 		}
 	}
 	
+	public String generar2(int numero) 
+	{
+		if(numero%3==0 && numero%5==0)
+			return "FizzBuzz";
+		else
+		{
+				return Integer.toString(numero);
+		}
+	}
 
 }

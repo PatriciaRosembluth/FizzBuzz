@@ -55,6 +55,12 @@ public class testFizzBuzz
 		
 	}
 	
-
+	@Test
+	public void testImprimeFizzBuzzSiEsMultiploDe3y5() 
+	{
+		FizzBuzz fb=new FizzBuzz();
+		assertEquals("FizzBuzz", fb.generar2(15));
+		
+	}
 
 }
