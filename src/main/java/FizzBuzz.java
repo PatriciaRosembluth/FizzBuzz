@@ -1,23 +1,34 @@
 
 public class FizzBuzz
 {
+	private static final String _MENSAJE_FIZZBUZZ = "FizzBuzz";
+	private static final String _MENSAJE_BUZZ = "Buzz";
+	private static final String _MENSAJE_FIZZ = "Fizz";
+	private static final int _BUZZ = 5;
+	private static final int _FIZZ = 3;
+	
 	public String generar(int numero) 
 	{
-		if(numero%3==0 && numero%5==0)
-		{
-			return "FizzBuzz";
-		}
-		else
-		{
-			if(numero%3==0)
-				return "Fizz";
-			else
-			{
-				if(numero%5==0)
-					return "Buzz";
-				else
-					return Integer.toString(numero);
-			}
-		}
+		if(esMultiploDe(numero, _FIZZ)&&esMultiploDe(numero, _BUZZ))
+			return _MENSAJE_FIZZBUZZ;
+		if(esMultiploDe(numero, _FIZZ))
+			return _MENSAJE_FIZZ;
+		if(esMultiploDe(numero, _BUZZ))
+			return _MENSAJE_BUZZ;
+		
+		return Integer.toString(numero);
+	}
+	
+	private boolean esMultiploDe(int numero, int multiplo)
+	{
+		return numero % multiplo == 0;
+	}
+
+	public String imprimir(int maximo) 
+	{
+		String resultado = "";
+		for(int i = 1; i<= maximo; i++)
+			resultado = resultado + generar(i) + "\n";
+		return resultado;
 	}	
 }

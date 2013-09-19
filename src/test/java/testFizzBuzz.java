@@ -18,7 +18,6 @@ public class testFizzBuzz
 	@Test
 	public void testImprimirFizzParaNumero3() 
 	{
-		FizzBuzz fb=new FizzBuzz();
 		assertEquals("Fizz", fb.generar(3));
 		
 	}
@@ -26,7 +25,6 @@ public class testFizzBuzz
 	@Test
 	public void testImprimeElMismoNumeroSiNoEs3() 
 	{
-		FizzBuzz fb=new FizzBuzz();
 		assertEquals("4", fb.generar(4));
 		
 	}
@@ -34,7 +32,6 @@ public class testFizzBuzz
 	@Test
 	public void testImprimeFizzSiEsMultiploDe3() 
 	{
-		FizzBuzz fb=new FizzBuzz();
 		assertEquals("Fizz", fb.generar(6));
 		
 	}
@@ -42,7 +39,6 @@ public class testFizzBuzz
 	@Test
 	public void testImprimirBuzzParaNumero5() 
 	{
-		FizzBuzz fb=new FizzBuzz();
 		assertEquals("Buzz", fb.generar(5));
 		
 	}
@@ -50,17 +46,41 @@ public class testFizzBuzz
 	@Test
 	public void testImprimeBuzzSiEsMultiploDe5() 
 	{
-		FizzBuzz fb=new FizzBuzz();
 		assertEquals("Buzz", fb.generar(25));
+		
+	}
+	
+	@Test
+	public void testImprimeFizzBuzzPara15() 
+	{
+		assertEquals("FizzBuzz", fb.generar(15));
 		
 	}
 	
 	@Test
 	public void testImprimeFizzBuzzSiEsMultiploDe3y5() 
 	{
-		FizzBuzz fb=new FizzBuzz();
 		assertEquals("FizzBuzz", fb.generar(15));
 		
 	}
+	
+	@Test
+	public void testImprimeElMismoNumeroSiNoEsMultiploDe3Ni5()
+	{
+		assertEquals("7", fb.generar(7));
+	}
+	
+	@Test
+	public void testImprimeUnaSecuenciaDeNumerosConReglasFizzBuzz()
+	{
+		String esperado = "1\n"+
+						  "2\n"+
+						  "Fizz\n"+
+						  "4\n"+
+						  "Buzz\n"+
+						  "Fizz\n";
+		assertEquals(esperado, fb.imprimir(6));
+	}
+
 
 }
