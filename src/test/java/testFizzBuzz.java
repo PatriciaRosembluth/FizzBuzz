@@ -16,9 +16,8 @@ public class testFizzBuzz
 	}
 
 	@Test
-	public void testImprimirFizzParaNumero3() 
+	public void GenerarFizzParaNumero3() 
 	{
-		FizzBuzz fb=new FizzBuzz();
 		assertEquals("Fizz", fb.generar(3));
 		
 	}
