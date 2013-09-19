@@ -16,8 +16,9 @@ public class testFizzBuzz
 	}
 
 	@Test
-	public void GenerarFizzParaNumero3() 
+	public void testImprimirFizzParaNumero3() 
 	{
+		FizzBuzz fb=new FizzBuzz();
 		assertEquals("Fizz", fb.generar(3));
 		
 	}
@@ -58,7 +59,7 @@ public class testFizzBuzz
 	public void testImprimeFizzBuzzSiEsMultiploDe3y5() 
 	{
 		FizzBuzz fb=new FizzBuzz();
-		assertEquals("FizzBuzz", fb.generar2(15));
+		assertEquals("FizzBuzz", fb.generar(15));
 		
 	}
 
