@@ -1,3 +1,4 @@
+
 public class FizzBuzz {
 
 	private static final int _FIZZ = 3;
@@ -26,5 +27,4 @@ public class FizzBuzz {
 			resultado = resultado + generar(i) + "\n";
 		return resultado;
 	}
-
 }
